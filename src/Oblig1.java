@@ -5,31 +5,11 @@ import java.lang.UnsupportedOperationException;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
+//s326156 Alexandros Messaritakis Chousein Aga
 
 public class Oblig1 {
 
-    public static void main(String[]args)
-    {
-        //int [] a = {16,4,6,8,15,6,1,3};
-        //int [] a = {3,3,4,5,5,6,7,7};
-       // int [] a = {5,3,7,4,3,5,7,8,6,7};
-        //char [] a = {'A','B','C','D','E','F','G','H','I','J'};
 
-
-
-      //  System.out.println(maks(a));
-      //  System.out.println(ombyttinger(a));
-       // System.out.println(antallUlikeSortert(a));
-        //System.out.println(antallUlikeUsortert(a));
-      //  delsortering(a);
-      //  System.out.println(Arrays.toString(a));
-        //rotasjon(a);
-       //System.out.println(a);
-        //String a = flett("ABC","DEFGH");
-      //  System.out.println(a);
-
-       // System.out.println( flett("A","LX","E"));
-    }
     private Oblig1() {}
 
     ///// Oppgave 1 //////////////////////////////////////
