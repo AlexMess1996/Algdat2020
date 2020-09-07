@@ -28,7 +28,7 @@ public class Oblig1 {
         //String a = flett("ABC","DEFGH");
       //  System.out.println(a);
 
-        System.out.println( flett("A","LX","E"));
+       // System.out.println( flett("A","LX","E"));
     }
     private Oblig1() {}
 
@@ -167,15 +167,19 @@ public class Oblig1 {
     ///// Oppgave 5 //////////////////////////////////////
     public static void rotasjon(char[] a) {
        // System.out.println(a.length);
-        char sisteElement = a[a.length-1];
+        try {
+            char sisteElement = a[a.length - 1];
 
-        for(int i =a.length-2; i>=0;--i){
-            char temp = a[i];
-            a[i+1] = temp;
+            for (int i = a.length - 2; i >= 0; --i) {
+                char temp = a[i];
+                a[i + 1] = temp;
 
+            }
+
+            a[0] = sisteElement;
+        }catch (Exception e){
+            System.err.println("OBS: Tomt array i oppgave 5");
         }
-
-        a[0] = sisteElement;
     }
 
     ///// Oppgave 7 //////////////////////////////////////
@@ -217,7 +221,8 @@ public class Oblig1 {
         for (int i = 1; i < s.length; i++)
         {
             int temp = s[i].length();
-            System.out.println(s[i].length()+""+s[i]);
+           // System.out.println(s[i].length()+""+s[i]);
+            if (temp > y) y = temp;
 
         }
 
