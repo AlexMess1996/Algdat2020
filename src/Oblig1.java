@@ -13,7 +13,8 @@ public class Oblig1 {
         //int [] a = {16,4,6,8,15,6,1,3};
         //int [] a = {3,3,4,5,5,6,7,7};
        // int [] a = {5,3,7,4,3,5,7,8,6,7};
-        char [] a = {'A','B','C','D','E','F','G','H','I','J'};
+        //char [] a = {'A','B','C','D','E','F','G','H','I','J'};
+
 
 
       //  System.out.println(maks(a));
@@ -22,9 +23,12 @@ public class Oblig1 {
         //System.out.println(antallUlikeUsortert(a));
       //  delsortering(a);
       //  System.out.println(Arrays.toString(a));
-        rotasjon(a);
-        System.out.println(a);
+        //rotasjon(a);
+       //System.out.println(a);
+        //String a = flett("ABC","DEFGH");
+      //  System.out.println(a);
 
+        System.out.println( flett("A","LX","E"));
     }
     private Oblig1() {}
 
@@ -177,12 +181,57 @@ public class Oblig1 {
     ///// Oppgave 7 //////////////////////////////////////
     /// 7a)
     public static String flett(String s, String t) {
-        throw new UnsupportedOperationException();
+        int remain;
+        StringBuilder str = new StringBuilder();
+        if(s.length() < t.length()){
+            remain= s.length();
+
+        }else{
+            remain = t.length();
+        }
+        for (int i = 0; i < remain; i++)
+        {
+            str.append(s.charAt(i)).append(t.charAt(i)); //tar første med den andre første
+        }
+
+        for (int i = remain; i < s.length(); i++)
+        {
+            str.append(s.charAt(i));  // tar med resten bakerst
+        }
+        for (int i = remain; i < t.length(); i++)
+        {
+            str.append(t.charAt(i));  // tar med resten
+        }
+        return str.toString();
+
     }
 
     /// 7b)
     public static String flett(String... s) {
-        throw new UnsupportedOperationException();
+        StringBuilder str = new StringBuilder();
+        if (s.length==0) str.append("");
+        int y  = s.length;
+
+
+
+        for (int i = 1; i < s.length; i++)
+        {
+            int temp = s[i].length();
+            System.out.println(s[i].length()+""+s[i]);
+
+        }
+
+        for (int i=0; i<y; i++)
+        {
+            for (String t:s)
+            {
+                if (i<t.length())
+                {
+                    str.append(t.charAt(i));
+                }
+            }
+        }
+        return str.toString();
     }
 
 
